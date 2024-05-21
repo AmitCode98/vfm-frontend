@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #ff0000;
+    --secondary: #55e6a5;
+    --muted: #696969;
+    --acent: #f7f7f9;
+  }
+}
+
+@layer base{
+    body{
+        @apply w-full min-h-screen flex flex-col;
+    }
+}
+
+
+.text-shadow{
+  
+  text-shadow: 1.2px 1.2px 0 #000,
+  -1.2px -1.2px 0 #000,  
+   1.2px -1.2px 0 #000,
+   -1.2px 1.2px 0 #000,
+    1.2px 1.2px 0 #000;
+    
+}
+
+
+/* Rotation animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  /* animation: spin infinite 3s linear; */
+  animation: spin infinite 20s linear; /* Adjust animation duration and timing function */
+  transform-origin: center;
+}
